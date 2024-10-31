@@ -18,7 +18,8 @@ export default defineConfig({
           { text: '关于本服', link: 'guide/about' },
           { text: '玩家守则', link: 'guide/rule' },
           { text: '常用指令', link: 'guide/command' },
-          { text: '领地创建', link: 'guide/create_domain' }
+          { text: '领地相关', link: 'guide/create_domain' },
+          { text: '服务器赞助相关', link: 'guide/donate' }
         ]
       }
     ],
