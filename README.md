@@ -11,7 +11,8 @@
     <br />
     <a href="https://wiki.astralpixel.top">查看文档</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">报告错误</a>
+    <a href="https://github.com/bluefish-08/astralpixel-wiki/issues">报告错误</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">提交贡献</a>
+    <a href="https://github.com/bluefish-08/astralpixel-wiki/issues">提交贡献</a>
   </p>
+
