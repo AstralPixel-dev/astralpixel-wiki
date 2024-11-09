@@ -15,9 +15,8 @@ features:
   - icon: 🖥️
     title: 高配置物理机
     details: 13900K物理机<br>保障游玩流畅体验
-
   - icon: 🌏
-    title: 高防CDN
+    title: 高防服务器
     details: 保障玩家稳定连接<br>让我们和DDoS说NO！
   - icon: 🐧
     title: QQ交流群
