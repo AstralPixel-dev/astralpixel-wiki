@@ -1,7 +1,8 @@
 <p align="center">
-  <a href="https://github.com/shaojintian/Best_README_template/">
-    <img src="images/logo.png" alt="Logo" width="68" height="64">
+  <a href="https://github.com/bluefish-08/astralpixel-wiki">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
+
 
   <h3 align="center">AstralPixel-Wiki</h3>
   <p align="center">
