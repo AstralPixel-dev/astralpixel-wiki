@@ -4,13 +4,11 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "AstralPixel",
   description: "AstralPixel Wiki",
-  
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' }
     ],
-
     sidebar: [
       {
         text: '文档',
