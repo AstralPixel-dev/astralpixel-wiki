@@ -1,0 +1,31 @@
+name: Deploy 
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Configure SSH
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        ssh-keyscan -p ${{ secrets.SSH_PORT }} ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+
+    - name: Execute Remote Commands
+      run: |
+        ssh -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USERNAME }}@${{ secrets.SERVER_IP}} << 'EOF'
+        set -e  # 任意命令失败则终止执行
+        export PATH="$PATH:/root/.nvm/versions/node/v22.13.1/bin"
+        cd /opt/astralpixel-wiki
+        git pull
+        npm run docs:build
+        sudo rm -rf /data/safeline/resources/nginx/static/static_12/*
+        sudo cp -r ./docs/.vitepress/dist/* /data/safeline/resources/nginx/static/static_12
+        EOF
