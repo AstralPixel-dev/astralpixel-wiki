@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/bluefish-08/astralpixel-wiki">
-    <img src="public/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 
