@@ -30,6 +30,7 @@ import { faCopy } from "@fortawesome/free-regular-svg-icons/faCopy"
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 
 import { ref } from "vue"
+import { useToast } from "vue-toastification"
 
 const props = defineProps({
   tooltip: String,
@@ -38,6 +39,8 @@ const props = defineProps({
 const isHovered = ref(false)
 
 const copyCommand = () => {
+  const toast = useToast()
+
   const command = document
     .querySelector(".command-text")
     .textContent.replace(">", "")
@@ -45,8 +48,12 @@ const copyCommand = () => {
 
   navigator.clipboard
     .writeText(command)
-    .then(() => alert("Command copied"))
-    .catch(() => alert("Failed to copy command"))
+    .then(() => {
+      toast.success("已复制")
+    })
+    .catch((e) => {
+      toast.error(`复制失败: ${e}`)
+    })
 }
 </script>
 
