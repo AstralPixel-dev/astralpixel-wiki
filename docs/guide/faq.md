@@ -9,8 +9,8 @@
 ---
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="/whitelist-1.png" style="width: 330px; height: 167px;">
-    <img src="/whitelist-2.png" style="width: 330px; height: 167px;">
+    <img src="/whitelist-1.jpg" style="width: 330px; height: 167px;">
+    <img src="/whitelist-2.jpg" style="width: 330px; height: 167px;">
 </div>
 :::
 
