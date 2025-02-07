@@ -30,10 +30,19 @@ export default defineConfig({
               { text: '签到', link: '/guide/command/signin' },
               { text: '其他', link: '/guide/command/other' }
             ]
+          },
+          {
+            text: '更多附魔', collapsed: false,
+            items: [
+              { text: '附魔效果', link: '/guide/enchantment/effects' },
+              { text: '获取途径', link: '/guide/enchantment/get' },
+              { text: '常见问题', link: '/guide/enchantment/faq' },
+            ]
           }
         ]
       }
     ],
+
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/bluefish-08/astralpixel-wiki' }
