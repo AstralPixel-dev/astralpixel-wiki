@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "AstralPixel",
   description: "AstralPixel Wiki",
+  lastUpdated: true,
   cleanUrls: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -43,7 +44,9 @@ export default defineConfig({
       }
     ],
 
-
+    search: {
+      provider: 'local'
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/bluefish-08/astralpixel-wiki' }
     ],
