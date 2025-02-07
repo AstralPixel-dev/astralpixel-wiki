@@ -9,7 +9,7 @@
 ## 服务器管理名单
 
 - 服主：bluefish_08
-- 服务器核心管理：Pkqa, Kui_nice, Zhibohe, ShengFan_nb, 莎莎
+- 服务器核心管理：Pkqa, Kui_nice, Zhibohe, ShengFan_nb, GK_HK416C
 
 ::: warning :warning: 注意
 管理员的行为接受 **所有玩家** 的监督。一旦发现 **滥用职权** 的行为，请联系服主或服务器核心管理进行处理。一经查实，将取消管理资格并 **根据情况封禁处理**。
