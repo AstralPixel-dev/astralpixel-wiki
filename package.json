@@ -10,9 +10,20 @@
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@nolebase/vitepress-plugin-highlight-targeted-heading": "^2.13.0",
     "less": "^4.2.2",
+    "markdown-it-mathjax3": "^4.3.2",
+    "markdown-it-task-lists": "^2.1.1",
     "vitepress": "^1.6.3",
+    "vitepress-markdown-timeline": "^1.2.2",
     "vue": "^3.5.13",
     "vue-toastification": "^2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "@nolebase/vitepress-plugin-enhanced-mark": "^2.13.0",
+    "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.13.0",
+    "@nolebase/vitepress-plugin-git-changelog": "^2.13.0",
+    "@nolebase/vitepress-plugin-inline-link-preview": "^2.13.0",
+    "@nolebase/vitepress-plugin-page-properties": "^2.13.0"
   }
 }
