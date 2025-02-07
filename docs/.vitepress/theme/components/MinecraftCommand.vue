@@ -4,19 +4,29 @@
     @mouseenter="isHovered = true"
     @mouseleave="isHovered = false"
   >
-    <div v-if="tooltip" class="tooltip" :style="{ opacity: isHovered ? 1 : 0 }">
+    <div
+      v-if="tooltip"
+      class="tooltip"
+      :style="{ opacity: isHovered ? 1 : 0 }"
+    >
       {{ tooltip }}
     </div>
 
     <div class="command-content">
-      <div class="command-text" :class="{ hovered: isHovered }">
+      <div
+        class="command-text"
+        :class="{ hovered: isHovered }"
+      >
         <span class="prompt">></span>
         <span class="slash">/</span>
         <slot />
       </div>
 
       <!-- Copy Button -->
-      <button class="copy-button" @click="copyCommand">
+      <button
+        class="copy-button"
+        @click="copyCommand"
+      >
         <span class="button-icon"><FontAwesomeIcon :icon="faCopy" /></span>
         <!-- This text is hidden by default, shown on hover -->
         <span class="button-text"><span class="shadow-text">复制</span></span>
@@ -25,31 +35,32 @@
   </div>
 </template>
 
-<script setup>
-import { faCopy } from "@fortawesome/free-regular-svg-icons/faCopy"
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
+<script setup lang="ts">
+import { faCopy } from '@fortawesome/free-regular-svg-icons/faCopy'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-import { ref } from "vue"
-import { useToast } from "vue-toastification"
+import { ref, VNode } from 'vue'
+import { useToast } from 'vue-toastification'
 
-const props = defineProps({
-  tooltip: String,
-})
+defineProps<{
+  tooltip?: string
+}>()
+
+const slots = defineSlots<{
+  default(): VNode<Text>[]
+}>()
 
 const isHovered = ref(false)
 
-const copyCommand = () => {
+function copyCommand() {
   const toast = useToast()
 
-  const command = document
-    .querySelector(".command-text")
-    .textContent.replace(">", "")
-    .trim()
+  const command = slots.default().map(node => node.el?.textContent).filter(Boolean).join('')
 
   navigator.clipboard
     .writeText(command)
     .then(() => {
-      toast.success("已复制")
+      toast.success('已复制')
     })
     .catch((e) => {
       toast.error(`复制失败: ${e}`)
@@ -71,7 +82,6 @@ const copyCommand = () => {
 .command-text,
 .copy-button,
 .tooltip {
-  font-family: "JetBrains Mono", "MiSans", monospace;
   transition: all 0.2s ease;
 
   user-select: none;

@@ -1,7 +1,5 @@
 {
     "recommendations": [
-        "esbenp.prettier-vscode",
-        "xlthu.pangu-markdown",
-        "yzhang.markdown-all-in-one"
+        "dbaeumer.vscode-eslint",
     ]
 }

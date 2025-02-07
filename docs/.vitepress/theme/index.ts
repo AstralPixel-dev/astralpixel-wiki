@@ -5,7 +5,7 @@ import {
   NolebaseEnhancedReadabilitiesMenu,
   Options as NolebaseEnhancedReadabilitiesOptions,
   NolebaseEnhancedReadabilitiesScreenMenu,
-  SpotlightStyle as NolebaseEnhancedReadabilitiesSpotlightStyle
+  SpotlightStyle as NolebaseEnhancedReadabilitiesSpotlightStyle,
 } from '@nolebase/vitepress-plugin-enhanced-readabilities'
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 import { InjectionKey as NolebaseGitChangelogInjectionKey, NolebaseGitChangelogPlugin } from '@nolebase/vitepress-plugin-git-changelog/client'
@@ -17,13 +17,12 @@ import '@nolebase/vitepress-plugin-highlight-targeted-heading/client/style.css'
 import { NolebasePagePropertiesPlugin } from '@nolebase/vitepress-plugin-page-properties'
 import '@nolebase/vitepress-plugin-page-properties/client/style.css'
 import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
+import DefaultTheme from 'vitepress/theme-without-fonts'
 import { h, type Plugin } from 'vue'
-import Toast, * as VueToastification from "vue-toastification"
-import "vue-toastification/dist/index.css"
-import DisplayCard from './components/DisplayCard.vue'
-import MinecraftCommand from "./components/MinecraftCommand.vue"
-import Layout from "./Layout.vue"
+import Toast, * as VueToastification from 'vue-toastification'
+import 'vue-toastification/dist/index.css'
+import MinecraftCommand from './components/MinecraftCommand.vue'
+import Layout from './Layout.vue'
 import './style.css'
 
 export default {
@@ -72,7 +71,7 @@ export default {
     })
     app.provide(NolebaseEnhancedReadabilitiesInjectionKey, {
       layoutSwitch: {
-        defaultMode: 1
+        defaultMode: 1,
       },
       spotlight: {
         defaultToggle: true,
@@ -86,15 +85,14 @@ export default {
       commitsRelativeTime: true,
       displayAuthorsInsideCommitLine: true,
       hideContributorsHeader: true,
-      hideChangelogHeader: true
+      hideChangelogHeader: true,
     })
 
     app.component('MinecraftCommand', MinecraftCommand)
-    app.component('DisplayCard', DisplayCard)
 
     app.use(Toast, {
       timeout: 2000,
-      position: (VueToastification.POSITION || { 'TOP_RIGHT': 'top-right' }).TOP_RIGHT,
+      position: (VueToastification.POSITION || { TOP_RIGHT: 'top-right' }).TOP_RIGHT,
     } as VueToastification.PluginOptions)
-  }
+  },
 } satisfies Theme

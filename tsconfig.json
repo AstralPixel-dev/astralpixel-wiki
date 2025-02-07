@@ -1,21 +1,29 @@
 {
     "compilerOptions": {
+        "lib": [
+            "DOM",
+            "ESNext",
+        ],
+        "isolatedModules": true,
+        "esModuleInterop": true,
         "module": "ESNext",
         "moduleResolution": "Bundler",
-        "lib": [
-            "ES2015",
-            "DOM"
-        ]
+        "resolveJsonModule": true,
+        "target": "ES2019",
+        "strict": true,
+        "allowJs": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": ".",
+        // Vite takes care of building everything, not tsc.
+        "noEmit": true
     },
     "include": [
         "**/.vitepress/**/*.ts",
+        "**/.vitepress/**/*.js",
         "**/.vitepress/**/*.mts",
-        "**/.vitepress/**/*.vue"
-    ],
-    "exclude": [
-        "node_modules"
-    ],
-    "vueCompilerOptions": {
-        "lib": "vue"
-    }
+        "**/.vitepress/**/*.mjs",
+        "**/.vitepress/**/*.vue",
+        "eslint.config.mjs",
+    ]
 }

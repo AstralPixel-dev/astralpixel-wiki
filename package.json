@@ -2,7 +2,8 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "prepare": "husky"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -11,7 +12,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@nolebase/vitepress-plugin-highlight-targeted-heading": "^2.13.0",
+    "@vueuse/core": "^12.5.0",
     "less": "^4.2.2",
+    "markdown-it-attribution": "^0.1.4",
     "markdown-it-mathjax3": "^4.3.2",
     "markdown-it-task-lists": "^2.1.1",
     "vitepress": "^1.6.3",
@@ -22,12 +25,35 @@
   "devDependencies": {
     "@babel/plugin-transform-typescript": "^7.26.7",
     "@babel/preset-typescript": "^7.26.0",
+    "@eslint/js": "^9.19.0",
     "@nolebase/vitepress-plugin-enhanced-mark": "^2.13.0",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.13.0",
     "@nolebase/vitepress-plugin-git-changelog": "^2.13.0",
     "@nolebase/vitepress-plugin-inline-link-preview": "^2.13.0",
     "@nolebase/vitepress-plugin-page-properties": "^2.13.0",
+    "@stylistic/eslint-plugin": "^3.0.1",
+    "@types/markdown-it": "^14.1.2",
     "@types/node": "^22.13.1",
+    "@typescript-eslint/parser": "^8.23.0",
+    "eslint": "^9.19.0",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-import-x": "^4.6.1",
+    "eslint-plugin-vue": "^9.32.0",
+    "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "typescript-eslint": "^8.23.0",
     "url": "^0.11.4"
+  },
+  "lint-staged": {
+    "*.{ts,js,vue}": "eslint --fix"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
