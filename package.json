@@ -26,6 +26,8 @@
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.13.0",
     "@nolebase/vitepress-plugin-git-changelog": "^2.13.0",
     "@nolebase/vitepress-plugin-inline-link-preview": "^2.13.0",
-    "@nolebase/vitepress-plugin-page-properties": "^2.13.0"
+    "@nolebase/vitepress-plugin-page-properties": "^2.13.0",
+    "@types/node": "^22.13.1",
+    "url": "^0.11.4"
   }
 }

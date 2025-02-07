@@ -3,7 +3,8 @@
         "module": "ESNext",
         "moduleResolution": "Bundler",
         "lib": [
-            "ES2015"
+            "ES2015",
+            "DOM"
         ]
     },
     "include": [

@@ -8,6 +8,7 @@ import {
   PagePropertiesMarkdownSection
 } from '@nolebase/vitepress-plugin-page-properties/vite'
 import taskLists from "markdown-it-task-lists"
+import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vitepress'
 import timeline from 'vitepress-markdown-timeline'
 
@@ -105,6 +106,18 @@ export default defineConfig({
         '@nolebase/ui',
       ],
     },
+
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPFeature\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/CustomVPFeature.vue', (import.meta as any).url)
+          )
+        }
+      ]
+    }
+
   },
 
   markdown: {
