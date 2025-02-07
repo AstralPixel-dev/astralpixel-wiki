@@ -21,6 +21,7 @@ jobs:
           export PATH="$PATH:/root/.nvm/versions/node/v22.13.1/bin"
           cd /opt/astralpixel-wiki
           git pull
+          npm install --include=dev
           npm run docs:build
           sudo rm -rf /data/safeline/resources/nginx/static/static_12/*
           sudo cp -r ./docs/.vitepress/dist/* /data/safeline/resources/nginx/static/static_12
