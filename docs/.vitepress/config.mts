@@ -87,7 +87,24 @@ export default defineConfig({
           'index.md',
         ],
       }),
-    ]
+    ],
+
+    optimizeDeps: {
+      exclude: [
+        '@nolebase/vitepress-plugin-enhanced-readabilities/client',
+        '@nolebase/vitepress-plugin-highlight-targeted-heading/client',
+        'vitepress',
+        '@nolebase/ui',
+      ],
+    },
+
+    ssr: {
+      noExternal: [
+        '@nolebase/vitepress-plugin-enhanced-readabilities',
+        '@nolebase/vitepress-plugin-highlight-targeted-heading',
+        '@nolebase/ui',
+      ],
+    },
   },
 
   markdown: {

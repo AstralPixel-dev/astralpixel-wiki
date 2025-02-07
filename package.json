@@ -20,6 +20,8 @@
     "vue-toastification": "^2.0.0-rc.5"
   },
   "devDependencies": {
+    "@babel/plugin-transform-typescript": "^7.26.7",
+    "@babel/preset-typescript": "^7.26.0",
     "@nolebase/vitepress-plugin-enhanced-mark": "^2.13.0",
     "@nolebase/vitepress-plugin-enhanced-readabilities": "^2.13.0",
     "@nolebase/vitepress-plugin-git-changelog": "^2.13.0",
