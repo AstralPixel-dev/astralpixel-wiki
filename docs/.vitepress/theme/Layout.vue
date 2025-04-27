@@ -40,15 +40,7 @@ provide("toggle-appearance", async ({ clientX: x, clientY: y }: MouseEvent) => {
 </script>
 
 <template>
-  <DefaultTheme.Layout>
-    <template #nav-bar-content-after
-      ><slot name="nav-bar-content-after"></slot
-    ></template>
-    <template #nav-screen-content-after
-      ><slot name="nav-screen-content-after"></slot
-    ></template>
-    <template #layout-top><slot name="layout-top"></slot></template>
-  </DefaultTheme.Layout>
+  <DefaultTheme.Layout />
 </template>
 
 <style lang="less">

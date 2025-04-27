@@ -1,4 +1,22 @@
 # 常见问题
+
+::: info <h4 style="margin: 0">服务器是死亡不掉落吗</h4>
+是的，为了防止玩家心态崩溃，我们开启了死亡不掉落
+:::
+
+
+::: info <h4 style="margin: 0">如何快速回家</h4>
+你可以使用/sethome <家的名字>设置家<br>
+然后使用/home <家的名字> 快速回家<br>
+你也可以使用/suicide 自杀回到重生点
+:::
+
+::: info <h4 style="margin: 0">关于服务器种子</h4>
+服务器种子不公开<br>
+并且严禁破解种子，一经发现封禁处理
+:::
+
+
 ::: info <h4 style="margin: 0">白名单相关</h4>
 1. 进入服务器，查看验证码
 
@@ -9,8 +27,7 @@
 ---
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="/whitelist-1.jpg" style="width: 330px; height: 167px;">
-    <img src="/whitelist-2.jpg" style="width: 330px; height: 167px;">
+    <img src="/whitelist-1.jpg">
 </div>
 :::
 

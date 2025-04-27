@@ -1,7 +1,6 @@
 <template>
   <div
     class="command-block"
-    ref="commandBlockRef"
     @mouseenter="isHovered = true"
     @mouseleave="isHovered = false"
   >
@@ -26,14 +25,12 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { faCopy } from "@fortawesome/free-regular-svg-icons/faCopy"
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 
-import { ref, useSlots } from "vue"
+import { ref } from "vue"
 import { useToast } from "vue-toastification"
-
-const commandBlockRef = ref<InstanceType<typeof HTMLDivElement>>(null)
 
 const props = defineProps({
   tooltip: String,
@@ -41,25 +38,13 @@ const props = defineProps({
 
 const isHovered = ref(false)
 
-const slots = useSlots()
-
 const copyCommand = () => {
   const toast = useToast()
 
-  // const command = document
-  //   .querySelector(".command-text")
-  //   .textContent.replace(">", "")
-  //   .trim()
-  const slashIfPresent = commandBlockRef.value.classList.contains("no-slash")
-    ? ""
-    : "/"
-  const command =
-    slashIfPresent +
-    slots
-      .default([])
-      .map((node: { el: { textContent: any } }) => node.el?.textContent)
-      .filter((a: any) => a)
-      .join("")
+  const command = document
+    .querySelector(".command-text")
+    .textContent.replace(">", "")
+    .trim()
 
   navigator.clipboard
     .writeText(command)

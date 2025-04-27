@@ -6,5 +6,3 @@
 | <MinecraftCommand class="borderless">tps</MinecraftCommand>        | 查看服务器 tps                                                                                |
 | <MinecraftCommand class="borderless">tps region</MinecraftCommand> | 查看当前区块 tps                                                                              |
 | <MinecraftCommand class="borderless">tpsbar</MinecraftCommand>     | 实时查看当前区块 tps                                                                          |
-| <MinecraftCommand class="borderless">slime</MinecraftCommand>      | 查询当前区块是否为史莱姆区块                                                                  |
-| <MinecraftCommand class="borderless">slimemap</MinecraftCommand>   | 查询周围区块是否为史莱姆区块                                                                  |
