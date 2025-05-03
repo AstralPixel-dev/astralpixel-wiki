@@ -1,0 +1,124 @@
+/**
+ * 表格组件样式
+ * -------------------------------------------------------------------------- */
+
+/* 表格基础样式 */
+table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  line-height: 1.6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* 表格单元格样式 */
+th, td {
+  padding: 0.8em 1em;
+  border: 1px solid var(--vp-c-divider);
+  word-break: break-word;
+  line-height: 1.5;
+  vertical-align: middle;
+  height: auto;
+  text-align: center;
+}
+
+/* 表头样式 */
+th {
+  font-weight: 600;
+  background-color: var(--vp-c-bg-soft);
+  white-space: nowrap;
+  text-align: center !important;
+  border-bottom: 2px solid var(--vp-c-divider);
+}
+
+/* 覆盖VitePress默认表格样式 */
+.vp-doc table {
+  display: table;
+  width: 100%;
+  overflow: visible;
+  font-size: 14px;
+}
+
+/* 针对附魔表格的特殊设置 */
+.enchant-table {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.enchant-table table {
+  width: 100%;
+  table-layout: fixed;
+  display: table;
+  overflow: visible;
+  border-spacing: 0;
+}
+
+/* 表格行交替背景色 */
+.enchant-table tr:nth-child(even) {
+  background-color: var(--vp-c-bg-soft);
+}
+
+.enchant-table tr:nth-child(odd) {
+  background-color: var(--vp-c-bg);
+}
+
+/* 鼠标悬停效果 */
+.enchant-table tr:hover {
+  background-color: var(--vp-c-gray-soft);
+}
+
+/* 解决字体重叠问题 */
+.enchant-table td {
+  line-height: 1.5;
+  min-height: 24px;
+  height: auto;
+  padding: 10px;
+  font-size: 14px;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+
+/* 指定列宽度 */
+.enchant-table th:nth-child(1) {
+  width: 12%;
+}
+
+.enchant-table th:nth-child(2) {
+  width: 8%;
+}
+
+.enchant-table th:nth-child(3) {
+  width: 15%;
+}
+
+.enchant-table th:nth-child(4) {
+  width: 40%;
+}
+
+.enchant-table td:nth-child(4) {
+  text-align: left;
+}
+
+.enchant-table th:nth-child(5) {
+  width: 25%;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .enchant-table table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .enchant-table th,
+  .enchant-table td {
+    white-space: normal;
+    word-break: break-word;
+    font-size: 13px;
+    padding: 8px;
+  }
+} 

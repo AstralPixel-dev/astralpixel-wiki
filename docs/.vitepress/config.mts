@@ -20,6 +20,7 @@ export default defineConfig({
           { text: '玩家守则', link: '/guide/rule' },
           { text: '常见问题', link: '/guide/faq' },
           { text: '赞助服务器', link: '/guide/donate' },
+          { text: '新增附魔', link: '/guide/enchants' },
           {
             text: '常用指令', collapsed: false,
             items: [

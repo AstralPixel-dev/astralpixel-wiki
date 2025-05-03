@@ -1,0 +1,121 @@
+/**
+ * 修复布局问题
+ * -------------------------------------------------------------------------- */
+
+/* 调整页面布局变量 */
+:root {
+  --vp-layout-max-width: 1440px;
+  --vp-sidebar-width: 272px;
+  --vp-aside-width: 224px; /* 恢复默认值 */
+}
+
+/* 只在特定页面（附魔页）移除aside */
+.enchant-page .aside,
+.vp-doc .enchant-table + .aside {
+  display: none !important;
+  width: 0 !important;
+  max-width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.enchant-page .VPDoc.has-aside .container,
+.enchant-table .VPDoc.has-aside .container {
+  display: block !important;
+}
+
+.enchant-page .VPDoc.has-aside .content-container,
+.enchant-table .VPDoc.has-aside .content-container {
+  max-width: 100% !important;
+}
+
+/* 针对aside隐藏但占用空间的问题 */
+@media (max-width: 959px) {
+  .VPSidebar:not(.open) {
+    display: none;
+  }
+  
+  :root {
+    --vp-aside-width: 0px;
+  }
+}
+
+/* 修复页面主要内容区域宽度 */
+.VPContent {
+  width: 100%;
+  max-width: 100%;
+}
+
+.VPDoc {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 当侧边栏隐藏时，确保内容占满全屏 */
+@media (max-width: 959px) {
+  .VPContent.has-sidebar {
+    margin-left: 0;
+  }
+  
+  .VPDoc.has-aside .content-container {
+    max-width: 100%;
+  }
+}
+
+/* 在桌面视图时，优化内容区域宽度 */
+@media (min-width: 960px) {
+  .VPContent.has-sidebar {
+    padding-left: var(--vp-sidebar-width);
+  }
+  
+  .VPDoc.has-aside .content-container {
+    max-width: calc(100% - var(--vp-aside-width, 0px));
+  }
+  
+  .VPDoc:not(.has-aside) .content-container {
+    max-width: 100%;
+  }
+  
+  /* 只在特定页面隐藏aside容器 */
+  .enchant-page .aside-container,
+  .enchant-table .aside-container {
+    display: none;
+  }
+}
+
+/* 确保侧边栏正确计算高度 */
+.VPSidebar {
+  height: calc(100vh - var(--vp-nav-height));
+}
+
+/* 表格在小屏幕上的调整 */
+@media (max-width: 768px) {
+  .enchant-table th,
+  .enchant-table td {
+    padding: 0.4em 0.6em;
+  }
+}
+
+/* 优化VitePress Markdown内容区域宽度 */
+.vp-doc {
+  width: 100%;
+  max-width: 100%;
+}
+
+.vp-doc div[class*='language-'] {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 针对附魔页的特殊处理 */
+.enchant-page .content,
+.enchant-table .content {
+  width: 100%;
+  max-width: 100%;
+}
+
+.enchant-page .content-container,
+.enchant-table .content-container {
+  max-width: 100%;
+  width: 100%;
+} 
