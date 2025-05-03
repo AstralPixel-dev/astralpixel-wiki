@@ -1,63 +1,49 @@
-<script setup>
-// 在组件挂载后移除aside元素
-import { onMounted, onUpdated } from 'vue'
-
-const removeAside = () => {
-  // 检查是否在客户端环境
-  if (typeof window === 'undefined') return
-  
-  // 查找 aside 元素
-  const asideElements = document.querySelectorAll('.aside')
-  if (asideElements.length) {
-    asideElements.forEach(el => {
-      el.style.display = 'none'
-      el.style.width = '0'
-      el.style.maxWidth = '0'
-      
-      // 调整父元素的布局
-      if (el.parentElement) {
-        el.parentElement.style.gridTemplateColumns = '1fr'
-      }
-    })
-    
-    // 调整内容容器的宽度
-    const contentContainers = document.querySelectorAll('.VPDoc.has-aside .content-container')
-    contentContainers.forEach(el => {
-      el.style.maxWidth = '100%'
-    })
-    
-    console.log('已移除附魔页的aside元素')
-  }
-}
-
-// 组件挂载后调用
-onMounted(removeAside)
-
-// 组件更新后调用，处理动态路由变化
-onUpdated(removeAside)
-</script>
-
 <template>
-  <div class="enchant-page-layout">
+  <div class="enchant-page-wrapper">
     <slot></slot>
   </div>
 </template>
 
-<style scoped>
-.enchant-page-layout :deep(.VPDoc) {
-  width: 100%;
-  max-width: 100%;
-}
+<script setup>
+import { onMounted } from 'vue'
 
-.enchant-page-layout :deep(.VPDoc.has-aside .container) {
+// 使用简单的脚本添加类名到父元素
+onMounted(() => {
+  if (typeof window === 'undefined') return
+  
+  // 安全地获取父级文档元素
+  const wrapper = document.querySelector('.enchant-page-wrapper')
+  if (!wrapper) return
+  
+  let parent = wrapper
+  while (parent && !parent.classList.contains('VPDoc')) {
+    parent = parent.parentElement
+  }
+  
+  // 找到文档容器后，添加自定义类名
+  if (parent) {
+    parent.classList.add('enchant-page-doc')
+  }
+})
+</script>
+
+<style>
+/* 特定于附魔页面的样式 */
+.enchant-page-wrapper {
+  width: 100%;
   display: block;
 }
 
-.enchant-page-layout :deep(.VPDoc.has-aside .content-container) {
-  max-width: 100%;
+/* 通过父级类名定位，更兼容的方式 */
+.enchant-page-doc .aside {
+  display: none !important;
 }
 
-.enchant-page-layout :deep(.aside) {
-  display: none !important;
+.enchant-page-doc .container {
+  grid-template-columns: 1fr !important;
+}
+
+.enchant-page-doc .content-container {
+  max-width: 100% !important;
 }
 </style> 

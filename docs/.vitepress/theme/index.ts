@@ -5,11 +5,10 @@ import { h } from 'vue'
 import Toast, * as VueToastification from "vue-toastification"
 import "vue-toastification/dist/index.css"
 import MinecraftCommand from "./components/MinecraftCommand.vue"
-import EnchantPageLayout from "./components/EnchantPageLayout.vue"
+import StandaloneEnchantPage from "./components/StandaloneEnchantPage.vue"
 import Layout from "./Layout.vue"
 import './style.css'
 import './table-style.css'
-import './layout-fix.css'
 
 export default {
   extends: DefaultTheme,
@@ -21,7 +20,7 @@ export default {
   enhanceApp({ app, router, siteData }) {
     // 注册组件
     app.component('MinecraftCommand', MinecraftCommand)
-    app.component('EnchantPageLayout', EnchantPageLayout)
+    app.component('StandaloneEnchantPage', StandaloneEnchantPage)
 
     const options = {
       timeout: 2000,
