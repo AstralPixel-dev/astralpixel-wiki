@@ -66,7 +66,7 @@
       </div>
       <div class="food-content">
         <div class="food-effects">
-          <p><strong>效果：</strong>食用后返还</p>
+          <p><strong>效果：</strong>15秒内饱食度维持最大值</p>
         </div>
       </div>
       <div class="food-crafting">
