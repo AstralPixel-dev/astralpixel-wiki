@@ -22,6 +22,10 @@ export default defineConfig({
           { text: '赞助服务器', link: '/guide/donate' },
           { text: '新增附魔', link: '/guide/enchants' },
           {
+            text:'服务器特色内容', collapsed: false,
+            items: [{text:'特色菜肴', link:'/guide/datapacks/food'}]
+          },
+          {
             text: '常用指令', collapsed: false,
             items: [
               { text: '传送类', link: '/guide/command/teleport' },

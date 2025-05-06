@@ -9,6 +9,7 @@ import StandaloneEnchantPage from "./components/StandaloneEnchantPage.vue"
 import Layout from "./Layout.vue"
 import './style.css'
 import './table-style.css'
+import './food-cards.css'
 
 export default {
   extends: DefaultTheme,
