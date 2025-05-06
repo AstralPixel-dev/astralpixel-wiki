@@ -53,7 +53,7 @@
       </div>
       <div class="food-crafting">
         <div class="food-crafting-title">合成表</div>
-        <img src="/foods/crafting/glittering_bun_recipe.png" alt="无限面包合成表" />
+        <img src="/foods/crafting/infinite_bread_recipe.png" alt="无限面包合成表" />
       </div>
     </div>
   </div>
