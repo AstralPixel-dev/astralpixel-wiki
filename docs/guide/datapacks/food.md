@@ -115,6 +115,26 @@
       </div>
     </div>
   </div>
+
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
+        <img class="food-icon" src="/foods/末地浓缩瓶装汤.png" alt="末地浓缩瓶装汤" />
+        <h3>末地浓缩瓶装汤</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>以当前位置为中心，半径6格连续瞬移4次。恢复8点生命，清除自身缓慢与漂浮效果。</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/末地汤.png" alt="末地浓缩瓶装汤合成表" />
+      </div>
+    </div>
+  </div>
+
+
 </div>
 
 ## 美味派
@@ -154,4 +174,59 @@
       </div>
     </div>
   </div>
+
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
+        <img class="food-icon" src="/foods/wealth_pie.png" alt="重·金·属·派" />
+        <h3>重·金·属·派</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>恢复全部生命，获得5分钟伤害吸收5，抗性提升2，抗火与10秒生命回复5效果，30秒内维持饱食度至最大值，移除所有负面效果</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/黑派.png" alt="重·金·属·派 合成表" />
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
+        <img class="food-icon" src="/foods/creeper_pie.png" alt="苦力怕派" />
+        <h3>苦力怕派</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>食用后产生半径6格，伤害为20的爆炸伤害(不衰减)</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/苦力怕派.png" alt="苦力怕派合成表" />
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
+        <img class="food-icon" src="/foods/explosive_pie.png" alt="爆炸派" />
+        <h3>爆炸派</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>食用后产生半径3/4/5格，伤害为8/12/16的爆炸伤害(不衰减)</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/爆炸派.png" alt="爆炸派合成表" />
+      </div>
+    </div>
+  </div>
+
 </div>

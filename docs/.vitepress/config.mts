@@ -24,7 +24,7 @@ export default defineConfig({
             text:'服务器特色内容', collapsed: false,
             items: [
               {text:'特色菜肴', link:'/guide/datapacks/food'},
-              {text: '特色附魔', link: '/guide/enchants' },
+              {text: '特色附魔', link: '/guide/datapacks/enchants' },
             ] 
           },
           {
