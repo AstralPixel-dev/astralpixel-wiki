@@ -195,6 +195,24 @@
   <div class="food-card">
     <div class="food-info">
       <div class="food-title">
+        <img class="food-icon" src="/foods/拐杖糖.png" alt="拐杖糖" />
+        <h3>拐杖糖</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>无</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/拐杖糖.png" alt="拐杖糖" />
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
         <img class="food-icon" src="/foods/iceberg_chop.png" alt="冰川杂碎" />
         <h3>冰川杂碎</h3>
       </div>
@@ -206,6 +224,42 @@
       <div class="food-crafting">
         <div class="food-crafting-title">合成表</div>
         <img src="/foods/crafting/蓝鱼汤.png" alt="冰川杂碎" />
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
+        <img class="food-icon" src="/foods/辣海藻.png" alt="特辣的海藻" />
+        <h3>特辣的海藻</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>产生掉落方块状态的火焰，产生爆炸特效，自身直到下一次死亡前，接触火焰后燃烧时间设为无限</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/辣海藻.png" alt="特辣的海藻" />
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
+        <img class="food-icon" src="/foods/star_apple.png" alt="附魔星辰苹果" />
+        <h3>附魔星辰苹果</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>食用时额外清除所有负面效果，生命恢复时效延长，效果强化</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/附魔星辰苹果.png" alt="附魔星辰苹果" />
       </div>
     </div>
   </div>
@@ -242,24 +296,6 @@
       <div class="food-crafting">
         <div class="food-crafting-title">合成表</div>
         <img src="/foods/crafting/附魔钻石苹果.png" alt="附魔钻石苹果" />
-      </div>
-    </div>
-  </div>
-
-  <div class="food-card">
-    <div class="food-info">
-      <div class="food-title">
-        <img class="food-icon" src="/foods/star_apple.png" alt="附魔星辰苹果" />
-        <h3>附魔星辰苹果</h3>
-      </div>
-      <div class="food-content">
-        <div class="food-effects">
-          <p><strong>效果：</strong>食用时额外清除所有负面效果，生命恢复时效延长，效果强化</p>
-        </div>
-      </div>
-      <div class="food-crafting">
-        <div class="food-crafting-title">合成表</div>
-        <img src="/foods/crafting/附魔星辰苹果.png" alt="附魔星辰苹果" />
       </div>
     </div>
   </div>
