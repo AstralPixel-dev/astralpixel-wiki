@@ -45,7 +45,7 @@ export default defineConfig({
       provider: 'local'
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/bluefish-08/astralpixel-wiki' }
+      { icon: 'github', link: 'https://github.com/AstralPixel-dev/astralpixel-wiki' }
     ],
 
     footer: {
