@@ -134,8 +134,139 @@
     </div>
   </div>
 
+</div>
+
+## 小吃
+<div class="food-cards">
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
+        <img class="food-icon" src="/foods/french_fries.png" alt="薯条" />
+        <h3>薯条</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>无</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/薯条.png" alt="薯条" />
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
+        <img class="food-icon" src="/foods/potato_chips.png" alt="薯片" />
+        <h3>薯片</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>无</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/薯片.png" alt="薯片" />
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
+        <img class="food-icon" src="/foods/cooked_egg.png" alt="煎鸡蛋" />
+        <h3>煎鸡蛋</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>无</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/烤蛋.png" alt="烤蛋" />
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
+        <img class="food-icon" src="/foods/iceberg_chop.png" alt="冰川杂碎" />
+        <h3>冰川杂碎</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>突然减速后，获得1分钟夜视效果与10秒钟力量效果，移除自身反胃、失明和黑暗效果</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/蓝鱼汤.png" alt="冰川杂碎" />
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
+        <img class="food-icon" src="/foods/netherite_apple.png" alt="附魔合金苹果" />
+        <h3>附魔合金苹果</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>附魔金的效果等级强化，时效缩短</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/附魔合金苹果.png" alt="附魔合金苹果" />
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
+        <img class="food-icon" src="/foods/diamond_apple.png" alt="附魔钻石苹果" />
+        <h3>附魔钻石苹果</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>附魔金的效果时效延长</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/附魔钻石苹果.png" alt="附魔钻石苹果" />
+      </div>
+    </div>
+  </div>
+
+  <div class="food-card">
+    <div class="food-info">
+      <div class="food-title">
+        <img class="food-icon" src="/foods/star_apple.png" alt="附魔星辰苹果" />
+        <h3>附魔星辰苹果</h3>
+      </div>
+      <div class="food-content">
+        <div class="food-effects">
+          <p><strong>效果：</strong>食用时额外清除所有负面效果，生命恢复时效延长，效果强化</p>
+        </div>
+      </div>
+      <div class="food-crafting">
+        <div class="food-crafting-title">合成表</div>
+        <img src="/foods/crafting/附魔星辰苹果.png" alt="附魔星辰苹果" />
+      </div>
+    </div>
+  </div>
 
 </div>
+
+
 
 ## 美味派
 <div class="food-cards">
