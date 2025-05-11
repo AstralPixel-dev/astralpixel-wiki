@@ -19,6 +19,7 @@ export default defineConfig({
           { text: '关于本服', link: '/guide/about' },
           { text: '玩家守则', link: '/guide/rule' },
           { text: '常见问题', link: '/guide/faq' },
+          { text: '无法连接服务器', link: '/guide/connect' },
           { text: '赞助服务器', link: '/guide/donate' },
           {
             text:'服务器特色内容', collapsed: false,
