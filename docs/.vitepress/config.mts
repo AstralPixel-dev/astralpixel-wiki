@@ -27,7 +27,7 @@ export default defineConfig({
             items: [
               {text:'特色菜肴', link:'/guide/datapacks/food'},
               {text: '特色附魔', link: '/guide/datapacks/enchants' },
-              { text: '箱子保护', link: '/guide/command/chestprotect' },
+              { text: '箱子保护', link: '/guide/datapacks/chestprotect' },
             ] 
           },
           {
