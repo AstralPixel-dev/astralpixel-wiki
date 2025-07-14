@@ -1,8 +1,23 @@
-# 箱子保护类
-| 指令                                                          | 简介                         |
-| ------------------------------------------------------------- | ---------------------------- |
-| <MinecraftCommand class="borderless">chestprotect</MinecraftCommand>   | 进入箱子保护插件GUI         |
-| <MinecraftCommand class="borderless">lock</MinecraftCommand>   | 进入保护模式                         |
-| <MinecraftCommand class="borderless">unlock</MinecraftCommand> | 进入解除保护模式                         |
-| <MinecraftCommand class="borderless">trust <玩家名></MinecraftCommand>   | 将玩家加入信任列表 |
-| <MinecraftCommand class="borderless">untrust <玩家名></MinecraftCommand>   | 将玩家移除信任列表 |
+# 箱子保护
+
+为了保护玩家的物品安全，我们提供了便捷的**箱子/门锁**功能，让您可以轻松保护自己的物品和领地。
+
+## 🛡️ 使用方法
+
+1. **锁定容器**：
+   - 手持**告示牌**（无需下蹲）
+   - **右键点击**想要保护的箱子/门
+
+2. **授予他人访问权限**：
+   - 指针指向被锁定的告示牌上：
+   - 在**告示牌的第三行或第四行**输入好友的ID（最多添加两名玩家）
+   - 该好友即可获得容器使用权限
+
+::: warning ⚠️ 注意
+- **严禁滥用**：
+  - <span style="color:red">**禁止**锁定他人箱子</span>
+  - <span style="color:red">**禁止**在他人基地恶意使用</span>
+- 违规行为将受到<span style="color:red">**严肃处理**</span>，包括但不限于剥夺该功能使用权，封禁
+::: warning ⚠️ 注意  
+
+> 请合理使用保护功能，共同维护良好的游戏环境！
