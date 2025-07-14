@@ -17,7 +17,7 @@
 - **严禁滥用**：
   - <span style="color:red">**禁止**锁定他人箱子</span>
   - <span style="color:red">**禁止**在他人基地恶意使用</span>
-- 违规行为将受到<span style="color:red">**严肃处理**</span>，包括但不限于剥夺该功能使用权，封禁
-::: warning ⚠️ 注意  
+- 违规行为将受到<span style="color:red">**严肃处理**</span>，包括但不限于剥夺该功能使用权，封禁。
+- 
 
 > 请合理使用保护功能，共同维护良好的游戏环境！
