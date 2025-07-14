@@ -17,6 +17,7 @@ export default defineConfig({
         text: '文档',
         items: [
           { text: '关于本服', link: '/guide/about' },
+          { text: '管理列表', link: '/guide/admins' },
           { text: '玩家守则', link: '/guide/rule' },
           { text: '常见问题', link: '/guide/faq' },
           { text: '无法连接服务器', link: '/guide/connect' },
