@@ -1,4 +1,6 @@
-# AstralPixel 管理团队
+# AstralPixel 管理团队  
+
+服务器管理团队的名字后面都会有一个❤️哦~
 
 ## 👑 服主
 - 蓝鱼（bluefish_08） - QQ：2073760185
