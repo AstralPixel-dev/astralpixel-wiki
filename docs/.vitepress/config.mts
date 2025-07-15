@@ -28,6 +28,7 @@ export default defineConfig({
               {text:'特色菜肴', link:'/guide/datapacks/food'},
               {text: '特色附魔', link: '/guide/datapacks/enchants' },
               {text: '更多成就', link: '/guide/datapacks/advancement' },
+              {text: '扩展地形', link: '/guide/datapacks/MoreTerrain' },
             ] 
           },
           {
