@@ -1,5 +1,5 @@
 # 服务器新增附魔
-# <font size="5">Dungeons and Taverns数据包特殊附魔</font>
+## Dungeons and Taverns数据包特殊附魔
 
 <StandaloneEnchantPage>
 
