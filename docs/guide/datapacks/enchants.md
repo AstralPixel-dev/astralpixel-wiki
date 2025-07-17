@@ -1,7 +1,5 @@
 # 服务器新增附魔
-## Dungeons and Taverns数据包特殊附魔
-
-<StandaloneEnchantPage>
+# <font size="5">Dungeons and Taverns数据包特殊附魔</font>
 
 | 附魔名称 | 最大等级 | 可附魔装备 | 效果 | 排斥 | 获取方式 |  
 |----------|----------|------------|------|------|------------|
