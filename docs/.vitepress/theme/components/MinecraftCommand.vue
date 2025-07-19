@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="command-block"
-    @mouseenter="isHovered = true"
-    @mouseleave="isHovered = false"
-  >
+  <div class="command-block" ref="commandBlockRef" @mouseenter="isHovered = true" @mouseleave="isHovered = false">
     <div v-if="tooltip" class="tooltip" :style="{ opacity: isHovered ? 1 : 0 }">
       {{ tooltip }}
     </div>
@@ -17,7 +13,9 @@
 
       <!-- Copy Button -->
       <button class="copy-button" @click="copyCommand">
-        <span class="button-icon"><FontAwesomeIcon :icon="faCopy" /></span>
+        <span class="button-icon">
+          <FontAwesomeIcon :icon="faCopy" />
+        </span>
         <!-- This text is hidden by default, shown on hover -->
         <span class="button-text"><span class="shadow-text">复制</span></span>
       </button>
@@ -25,12 +23,14 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { faCopy } from "@fortawesome/free-regular-svg-icons/faCopy"
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 
-import { ref } from "vue"
+import { ref, useSlots } from "vue"
 import { useToast } from "vue-toastification"
+
+const commandBlockRef = ref<InstanceType<typeof HTMLDivElement>>(null)
 
 const props = defineProps({
   tooltip: String,
@@ -38,13 +38,25 @@ const props = defineProps({
 
 const isHovered = ref(false)
 
+const slots = useSlots()
+
 const copyCommand = () => {
   const toast = useToast()
 
-  const command = document
-    .querySelector(".command-text")
-    .textContent.replace(">", "")
-    .trim()
+  // const command = document
+  //   .querySelector(".command-text")
+  //   .textContent.replace(">", "")
+  //   .trim()
+  const slashIfPresent = commandBlockRef.value.classList.contains("no-slash")
+    ? ""
+    : "/"
+  const command =
+    slashIfPresent +
+    slots
+      .default([])
+      .map((node: { el: { textContent: any } }) => node.el?.textContent)
+      .filter((a: any) => a)
+      .join("")
 
   navigator.clipboard
     .writeText(command)
@@ -99,14 +111,16 @@ const copyCommand = () => {
   white-space: nowrap;
   text-overflow: ellipsis;
   flex-grow: 1;
-  margin-right: 8px; /* small gap before the button */
+  margin-right: 8px;
+  /* small gap before the button */
   transition: color 0.2s ease, text-shadow 0.3s ease;
 
   margin-right: 30px;
 }
 
 .command-text.hovered {
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* subtle modern glow effect */
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  /* subtle modern glow effect */
 }
 
 .prompt {
@@ -197,29 +211,37 @@ html:not(.dark) {
       background: #fafafa;
       border-color: #ccc;
     }
+
     color: #333;
   }
+
   .prompt {
     color: #007acc;
   }
+
   .slash {
     color: #3541b2;
   }
+
   .command-text.hovered {
     color: #111;
   }
+
   .copy-button {
     color: #333;
     border-color: #bbb;
   }
+
   .copy-button:hover {
     background: #f0f0f0;
     border-color: #aaa;
   }
+
   .tooltip {
     background: rgba(50, 50, 50, 0.8);
     color: #fff;
   }
+
   .tooltip::after {
     border-color: rgba(50, 50, 50, 0.8) transparent transparent transparent;
   }
@@ -232,29 +254,37 @@ html.dark {
       background: #2a2a2a;
       border-color: #3a3a3a;
     }
+
     color: #d0d0d0;
   }
+
   .prompt {
     color: #5fff5f;
   }
+
   .slash {
     color: #a8b1ff;
   }
+
   .command-text.hovered {
     color: #fff;
   }
+
   .copy-button {
     color: #d0d0d0;
     border-color: #5a5a5a;
   }
+
   .copy-button:hover {
     background: #3a3a3a;
     border-color: #6a6a6a;
   }
+
   .tooltip {
     background: rgba(40, 40, 40, 0.8);
     color: #fff;
   }
+
   .tooltip::after {
     border-color: rgba(40, 40, 40, 0.8) transparent transparent transparent;
   }
