@@ -112,7 +112,6 @@
 ## 凛冬遗塞（Stray Fort）
 > 此要塞生成于极寒群系，霜骸哨塔林立其间，流亡者盘踞为巢。
 
-
 [![pV3Kk40.png](https://s21.ax1x.com/2025/07/17/pV3Kk40.png)](https://imgse.com/i/pV3Kk40)
 *进入凛冬遗塞会获得成就 **[If Winter Doesn’t Come…]（如果冬日不再来临）**。<br>
 *凛冬要塞的怪物生成以流浪者、僵尸村民为主。<br>
