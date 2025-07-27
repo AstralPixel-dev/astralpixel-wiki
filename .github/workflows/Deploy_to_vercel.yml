@@ -4,26 +4,42 @@ name: Deploy to Vercel
 on:
   push:
     branches: [ main ] # 当代码推送到 main 分支时触发
-  pull_request:
-    branches: [ main ] # 当针对 main 分支发起 Pull Request 时触发
+  pull_request_target:
+    branches: [ main ] # 当针对 main 分支发起 Pull Request 时触发（可访问secrets）
 
 # 定义工作流程中的作业（jobs）
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    # 限制权限，增加安全性
+    permissions:
+      contents: read
+      pull-requests: write
+
     steps:
       # 步骤 1: 克隆仓库代码
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          # 对于push事件，使用默认行为
+          # 对于pull_request_target事件，checkout PR的代码
+          ref: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.head.sha || github.sha }}
 
       # 步骤 2: 部署到 Vercel
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@master
+        # 只有来自同一仓库的PR才部署（不是fork），或者是push事件
+        if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
         env:
-            VERSION: ${{ env.GITHUB_SHA }}
+            VERSION: ${{ github.sha }}
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.ORG_ID }}
           vercel-project-id: ${{ secrets.PROJECT_ID }}
           working-directory: ./
-          vercel-args: '--prod' # 可不填
+          # 只有push到main时才是生产部署，PR时是预览部署
+          vercel-args: ${{ github.event_name == 'push' && '--prod' || '' }}
+          # 启用GitHub评论功能
+          github-comment: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
