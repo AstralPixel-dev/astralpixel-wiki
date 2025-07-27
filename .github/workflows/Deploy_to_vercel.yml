@@ -16,6 +16,8 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      issues: write
+      repository-projects: read
 
     steps:
       # 步骤 1: 克隆仓库代码
