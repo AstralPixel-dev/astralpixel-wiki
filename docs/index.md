@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "AstralPixel"
   text: "服务器官方文档"
-  tagline: 解决你的所有问题！
+  tagline: 解决你的所有问题！🎉 [测试PR预览功能]
   actions:
     - theme: brand
       text: 快速开始
