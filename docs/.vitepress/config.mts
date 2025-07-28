@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "AstralPixel",
   description: "AstralPixel Wiki",
+  base: '/',
   lastUpdated: true,
   cleanUrls: true,
   themeConfig: {
@@ -56,8 +57,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2019-present Evan You'
+      message: '由 AstralPixel 维护，保留所有权利。',
+      copyright: 'Copyright © 2022-present AstralPixel'
     }
   }
 })
