@@ -23,6 +23,7 @@ export default defineConfig({
           { text: '无法连接服务器', link: '/guide/connect' },
           { text: 'QQ群机器人指令', link: '/guide/qqbot' },
           { text: '赞助服务器', link: '/guide/donate' },
+          { text: '老玩家认证规则', link: '/guide/oldplayers' },
           {
             text:'服务器特色内容', collapsed: false,
             items: [
