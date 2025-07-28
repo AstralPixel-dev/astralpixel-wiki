@@ -43,5 +43,5 @@ jobs:
           # 只有push到main时才是生产部署，PR时是预览部署
           vercel-args: ${{ github.event_name == 'push' && '--prod' || '' }}
           # 启用GitHub评论功能
-          github-comment: true
+          github-comment: ${{ github.event_name == 'pull_request_target' }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
