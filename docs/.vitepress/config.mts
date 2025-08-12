@@ -21,8 +21,13 @@ export default defineConfig({
           { text: '关于本服', link: '/guide/about' },
           { text: '管理列表', link: '/guide/admins' },
           { text: '玩家守则', link: '/guide/rule' },
-          { text: '常见问题', link: '/guide/faq' },
-          { text: '无法连接服务器', link: '/guide/connect' },
+          {
+            text:'常见问题', collapsed: false,
+            items: [
+              {text:'常见问题', link:'/guide/faq'},
+              {text: '暂时无法连接到身份验证服务器', link: '/guide/connect' },
+            ] 
+          },
           { text: 'QQ群机器人指令', link: '/guide/qqbot' },
           { text: '赞助服务器', link: '/guide/donate' },
           { text: '老玩家认证规则', link: '/guide/oldplayers' },
