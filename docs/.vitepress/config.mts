@@ -17,6 +17,7 @@ export default defineConfig({
       {
         text: '文档',
         items: [
+          { text: '前言', link: '/guide/start' },
           { text: '关于本服', link: '/guide/about' },
           { text: '管理列表', link: '/guide/admins' },
           { text: '玩家守则', link: '/guide/rule' },
